@@ -1,0 +1,7 @@
+name: astrbot_plugin_meihua
+author: meihua-dev
+display_name: 梅花易数占卜
+version: 1.0.0
+desc: 当用户发送"占卜"或指定数字时，根据梅花易数原理起卦，并用大模型生成卦象解读。
+help: 发送"占卜"根据当前时间起卦，或发送"占卜 3 8"用指定数字起卦（第一个数定上卦，第二个数定下卦）。可在配置中修改断卦风格提示词。
+repo: https://github.com/meihua-dev/astrbot_plugin_meihua

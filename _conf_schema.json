@@ -1,0 +1,50 @@
+{
+  "custom_divination_prompt": {
+    "description": "自定义断卦提示词（会替换默认的提示词，用于指导大模型解读卦象）",
+    "type": "string",
+    "hint": "输入你希望大模型使用的断卦风格或规则（如：请用古风文言文进行解读），留空则使用默认提示词。",
+    "default": ""
+  },
+  "allow_random_divination": {
+    "description": "允许随机起卦（无数字时自动随机生成两数）",
+    "type": "bool",
+    "hint": "开启后，发送'占卜'即可自动随机起卦；关闭后必须提供两个数字（如'起卦 3 8'）才能起卦。",
+    "default": true
+  },
+  "default_style": {
+    "description": "默认解读风格（自定义提示词优先）",
+    "type": "string",
+    "hint": "选择默认的卦象解读风格。仅当未填写自定义提示词时生效。可选：'白话夹文言'（默认）、'纯白话'、'古风文言文'、'俏皮风格'。",
+    "default": "白话夹文言"
+  },
+  "include_xiang_data": {
+    "description": "包含万物类象数据供LLM参考",
+    "type": "bool",
+    "hint": "开启后，卦象数据中会包含万物类象信息，帮助LLM更精准地融合类象进行断卦。关闭则不加类象。",
+    "default": true
+  },
+  "interpretation_max_words": {
+    "description": "解读最大字数（最小200字）",
+    "type": "int",
+    "hint": "限制LLM卦象解读的最大字数。留空或设为0使用默认500字。",
+    "default": 500
+  },
+  "allow_emoji": {
+    "description": "允许LLM使用emoji表情",
+    "type": "bool",
+    "hint": "开启后不再禁止emoji；关闭则禁止LLM使用任何emoji表情。",
+    "default": false
+  },
+  "allow_action_desc": {
+    "description": "允许LLM添加动作描述（如*走*、*看*）",
+    "type": "bool",
+    "hint": "开启后允许LLM使用*文字*格式的动作描述和角色独白；关闭则严格禁止。",
+    "default": false
+  },
+  "allow_exclamation": {
+    "description": "允许LLM使用感叹号",
+    "type": "bool",
+    "hint": "开启后不再限制感叹号使用；关闭则禁止过度使用感叹号。",
+    "default": false
+  }
+}
